@@ -18,7 +18,7 @@ public class ShoppingCartController {
         this.shoppingCartServiceImpl = shoppingCartServiceImpl;
     }
 
-    @PostMapping(path = "/add")
+    @GetMapping(path = "/add")
     @ResponseStatus(HttpStatus.CREATED)
     public String addProducts(@RequestParam(value="products") List<Integer> products) {
         this.shoppingCartServiceImpl.addProducts(products);
